@@ -1,3 +1,5 @@
+import { abs, square } from '#lib/functions.js';
+
 function sqrt_iter(before, guess, x) {
     return is_good_enough(before, guess, x)
         ? guess
@@ -10,18 +12,6 @@ function cube_improve(guess, x) {
 
 function is_good_enough(before, guess, x) {
     return abs(before - guess) < 0.001;
-}
-
-function abs(x) {
-    return x > 0
-        ? x
-        : x === 0
-            ? 0
-            : -x;
-}
-
-function square(x) {
-    return x * x;
 }
 
 function sqrt(x) {
