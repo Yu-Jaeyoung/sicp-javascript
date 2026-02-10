@@ -1,5 +1,5 @@
 function make_rand() {
-    let x = random_itit;
+    let x = random_init;
     return () => {
         x = rand_update(x);
         return x;
@@ -8,7 +8,7 @@ function make_rand() {
 
 const rand = make_rand();
 
-function estimate_pi() {
+function estimate_pi(trials) {
     return math_sqrt(6 / monte_carlo(trials, dirichlet_test));
 }
 

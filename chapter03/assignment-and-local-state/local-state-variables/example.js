@@ -56,4 +56,6 @@ function make_account(balance) {
                 ? deposit
                 : error(m, 'unknown request -- make_account');
     }
+
+    return dispatch;
 }
